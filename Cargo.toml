@@ -1,0 +1,27 @@
+[package]
+name = "spatium"
+version = "0.1.0"
+edition = "2021"
+description = "Spatium: see where your disk space goes, and free it by hand"
+license = "MIT"
+
+[[bin]]
+name = "spatium"
+path = "src/main.rs"
+
+[dependencies]
+eframe = "0.31"
+rayon = "1"
+libc = "0.2"
+rfd = "0.17"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+serde_json = "1"
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "0.6"
+objc2-foundation = { version = "0.3", default-features = false, features = ["std", "NSFileManager", "NSURL", "NSString", "NSError"] }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
