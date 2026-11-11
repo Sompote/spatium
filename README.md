@@ -16,3 +16,7 @@ cargo test --release # scan, trash and agent-output tests (one small test file g
 ```
 
 Check hooks: `SPATIUM_SCAN=<dir>` scans at start, `SPATIUM_SHOT=<file.png>` saves the window and quits, `SPATIUM_TAB=1` opens Largest files, `SPATIUM_THEME=light`.
+
+## License
+
+MIT, see [LICENSE](LICENSE). The bundled fonts (Inter, JetBrains Mono, Noto Sans Thai) are under the SIL Open Font License, see `assets/fonts/OFL-*.txt`.
